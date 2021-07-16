@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", function(){
 	
-	var proverb = "Bez pracy nie ma kołaczy";
+	var poverbs =    ["Bez pracy nie ma kołaczy", "Fortuna kołem się toczy", "Darowanemu koniowi w zęby się nie zagląda",
+                      "Nie chwal dnia przed zachodem słońca", "Lepszy wróbel w garści niż gołąb na dachu",
+					  "Apetyt rośnie w miarę jedzenia", "Co ma wisieć nie utonie", "Dzieci i ryby głosu nie mają",
+					  "Grosz do grosza a będzie kokosza", "Łaska pańska na pstrym koniu jeździ"];
+					  
+    
+	var random_number = Math.floor(Math.random()*9+0);
+
+    var proverb = poverbs[random_number];
+
 	proverb = proverb.toUpperCase();
 
 	var veiled_proverb = "";
@@ -12,15 +21,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	var letters = new Array(35);
 
-letters[0] = "A"; letters[1] = "Ą"; letters[2] = "B"; letters[3] = "C";
-letters[4] = "Ć"; letters[5] = "D"; letters[6] = "E"; letters[7] = "Ę"; 
-letters[8] = "F"; letters[9] = "G"; letters[10] = "H"; letters[11] = "I";
-letters[12] = "J"; letters[13] = "K"; letters[14] = "L"; letters[15] = "Ł";
-letters[16] = "M"; letters[17] = "N"; letters[18] = "Ń"; letters[19] = "O";
-letters[20] = "Ó"; letters[21] = "P"; letters[22] = "Q"; letters[23] = "R";
-letters[24] = "S"; letters[25] = "Ś"; letters[26] = "T"; letters[27] = "U";
-letters[28] = "V"; letters[29] = "W"; letters[30] = "X"; letters[31] = "Y";
-letters[32] = "Z"; letters[33] = "Ż"; letters[34] = "Ź";
+    letters[0] = "A"; letters[1] = "Ą"; letters[2] = "B"; letters[3] = "C";
+    letters[4] = "Ć"; letters[5] = "D"; letters[6] = "E"; letters[7] = "Ę"; 
+    letters[8] = "F"; letters[9] = "G"; letters[10] = "H"; letters[11] = "I";
+    letters[12] = "J"; letters[13] = "K"; letters[14] = "L"; letters[15] = "Ł";
+    letters[16] = "M"; letters[17] = "N"; letters[18] = "Ń"; letters[19] = "O";
+    letters[20] = "Ó"; letters[21] = "P"; letters[22] = "Q"; letters[23] = "R";
+    letters[24] = "S"; letters[25] = "Ś"; letters[26] = "T"; letters[27] = "U";
+    letters[28] = "V"; letters[29] = "W"; letters[30] = "X"; letters[31] = "Y";
+    letters[32] = "Z"; letters[33] = "Ż"; letters[34] = "Ź";
 
 	for(i=0; i<proverb.length; i++){
 		if(proverb.charAt(i) == " "){
